@@ -17,16 +17,16 @@ namespace CommonPattern
 
         private static string Execute(string input)
         {
-            string[] splittedInputs = input.Split(' ');
+            string[] splitterInputs = input.Split(' ');
             string outPut = string.Empty;
-            string firstSampleValue = splittedInputs[0];
+            string firstSampleValue = splitterInputs[0];
 
             for (int i = 0; i < firstSampleValue.Length; i++)
             {
                 bool isMatched = true;
-                for (int j = 1; j < splittedInputs.Length; j++)
+                for (int j = 1; j < splitterInputs.Length; j++)
                 {
-                    string firstVal = splittedInputs[j];
+                    string firstVal = splitterInputs[j];
                     if (firstSampleValue[i] != firstVal[i])
                     {
                         isMatched = false;
@@ -35,13 +35,9 @@ namespace CommonPattern
                 }
 
                 if (!isMatched)
-                {
                     outPut += '?';
-                }
                 else
-                {
                     outPut += firstSampleValue[i];
-                }
             }
 
             return outPut;

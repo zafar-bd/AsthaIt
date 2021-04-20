@@ -20,9 +20,7 @@ namespace Locker
             int[] lockerArray = new int[numberOfLockers];
 
             for (int i = 0; i < numberOfLockers; i++)
-            {
                 lockerArray[i] = i + 1;
-            }
 
             int n = 1;
             while (lockerArray.Length > 1)
@@ -32,9 +30,7 @@ namespace Locker
                 {
                     int index = i == 0 ? 0 : (n + 1) * i;
                     if (index >= lockerArray.Length)
-                    {
                         break;
-                    }
 
                     unlockedLockers[i] = lockerArray[index];
                 }
